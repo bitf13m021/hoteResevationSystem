@@ -1,0 +1,162 @@
+﻿@model List<Hotel_Reservation_System.Models.Mail>
+@{
+    ViewBag.Title = "AdminIndex";
+}
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!--main content start-->
+<section id="main-content">
+    <section class="wrapper">
+        <!--overview start-->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                    <li><i class="fa fa-laptop"></i>Dashboard</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box blue-bg">
+                    <!--<i class="fa fa-cloud-download"></i>-->
+                    <div class="count">6.674</div>
+                    <div class="title">Room Booking</div>
+                </div><!--/.info-box-->
+            </div><!--/.col-->
+
+
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box dark-bg">
+                    <i class="fa fa-thumbs-o-up"></i>
+                    <div class="count">4.362</div>
+                    <div class="title">Like</div>
+                </div><!--/.info-box-->
+            </div><!--/.col-->
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box green-bg">
+                    <i class="fa fa-cubes"></i>
+                    <div class="count">1.426</div>
+                    <div class="title">Sign Up</div>
+                </div><!--/.info-box-->
+            </div><!--/.col-->
+
+        </div><!--/.row-->
+
+        <br />
+        <div class="row">
+            <div class="col-lg-9 col-md-12">
+               
+                                  <div class="pull-left">Message</div>
+               
+                                <div class="widget-icons pull-right">
+                                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
+                                    <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="panel-body">
+                                <!-- Widget content -->
+                                <div class="padd sscroll">
+
+                                    <ul class="chats">
+
+                                        <!-- Chat by us. Use the class "by-me". -->
+                                        <li class="by-other">
+                                            <!-- Use the class "pull-left" in avatar -->
+                                            <div class="avatar pull-left">
+                                                     </div>
+
+                                            <div class="chat-content">
+                                                <!-- In meta area, first include "name" and then "time" -->
+                                                <div class="chat-meta">John Smith <span class="pull-right"></span></div>
+                                                Vivamus diam elit diam, consectetur dapibus adipiscing elit.
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+
+                                        <!-- Chat by other. Use the class "by-other". -->
+                                        <li class="by-other">
+                                           
+
+                                        <li class="by-other">
+                                            <div class="avatar pull-left">
+                                             
+                                                       </div>
+
+                                            <div class="chat-content">
+                                                <div class="chat-meta">John Smith <span class="pull-right"></span></div>
+                                                Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+
+                                        <li class="by-other">
+                                            <!-- Use the class "pull-right" in avatar -->
+                                            <div class="avatar pull-right">
+                                                     </div>
+
+                                            <div class="chat-content">
+                                                <!-- In the chat meta, first include "time" then "name" -->
+                                                <div class="chat-meta">John Smith <span class="pull-right">3 hours ago</span></div>
+    Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
+                                                <div class="clearfix"></div>
+                                            </div><br />
+                                            @foreach (var m in Model)
+                                            {<br />
+                                                <div class="chat-content">
+                                                <!-- In the chat meta, first include "time" then "name" -->
+                                                    <div class="chat-meta"> @m.Subject <span class="pull-right"></span></div>
+    @m.Messege      <div class="clearfix"></div>
+                                            </div>
+                                            }
+                                        </li>
+
+                                    </ul>
+
+                                </div>                <!-- project team & activity end -->
+
+</section>
+</section>
+<!--main content end-->
+  </section>
+<!-- container section start -->
+<!-- javascripts -->
+<script src="~/Scripts/Admin/jquery-ui-1.10.4.min.js"></script>
+<script src="~/Scripts/Admin/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="~/Scripts/Admin/jquery-ui-1.9.2.custom.min.js"></script>
+<!-- bootstrap -->
+<!--script for this page only-->
+<script src="~/Scripts/Admin/calendar-custom.js"></script>
+<script src="~/Scripts/Admin/jquery.rateit.min.js"></script>
+<!-- custom select -->
+<script src="~/Scripts/Admin/jquery.customSelect.min.js"></script>
+<script src="~/asset/Chart.js"></script>
+<script src="~/Scripts/Admin/jquery.js"></script>
+<script src="~/Scripts/Admin/bootstrap.min.js"></script>
+<!-- nicescroll -->
+<script src="~/Scripts/Admin/jquery.scrollTo.min.js"></script>
+<script src="~/Scripts/Admin/jquery.nicescroll.js" type="text/javascript"></script>
+
+<!--custome script for all page-->
+<script src="~/Scripts/Admin/scripts.js"></script>
+<!-- custom script for this page-->
+<script src="~/Scripts/Admin/sparkline-chart.js"></script>
+<script src="~/Scripts/Admin/easy-pie-chart.js"></script>
+<script src="~/Scripts/Admin/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="~/Scripts/Admin/jquery-jvectormap-world-mill-en.js"></script>
+<script src="~/Scripts/Admin/xcharts.min.js"></script>
+<script src="~/Scripts/Admin/jquery.autosize.min.js"></script>
+<script src="~/Scripts/Admin/jquery.placeholder.min.js"></script>
+<script src="~/Scripts/Admin/gdp-data.js"></script>
+<script src="~/Scripts/Admin/morris.min.js"></script>
+<script src="~/Scripts/Admin/sparklines.js"></script>
+<script src="~/Scripts/Admin/charts.js"></script>
+<script src="~/Scripts/Admin/jquery.slimscroll.min.js"></script>

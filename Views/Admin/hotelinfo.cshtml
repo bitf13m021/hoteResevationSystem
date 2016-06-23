@@ -1,0 +1,86 @@
+﻿@model Hotel_Reservation_System.Models.hotel
+@{
+    ViewBag.Title = "AddUser";
+}
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"><i class="fa fa-files-o"></i> Form Validation</h3>
+                <ol class="breadcrumb">
+                    <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                    <li><i class="icon_document_alt"></i>Hotel</li>
+                    <li><i class="fa fa-files-o"></i>Hoytel Info</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Form validations -->
+        <div class="row">
+            <div class="col-lg-12">
+                <section class="panel">
+                    <header class="panel-heading">
+                        Add User
+                    </header>
+
+                    <div class="panel-body">
+                        <div class="form">
+                            <form class="form-validate form-horizontal " id="register_form" method="get" action="~/Admin/UpdateHotel">
+                                <div class="form-group ">
+                                    <label for="fullname" class="control-label col-lg-2">Hotel name <span class="required">*</span></label>
+                                    <div class="col-lg-10">
+                                        <input class=" form-control" id="hotelName" value="@Model.hotelName" type="text" name="hotelName"/>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="address" class="control-label col-lg-2">Address <span class="required">*</span></label>
+                                    <div class="col-lg-10">
+                                        <input class=" form-control" id="address" value="@Model.address" type="text" name="address" />
+
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="username" class="control-label col-lg-2">email <span class="required">*</span></label>
+                                    <div class="col-lg-10">
+                                        <input class="form-control " id="email" value="@Model.email" type="text" name="email" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group ">
+                                    <label for="email" class="control-label col-lg-2">Contac_no <span class="required">*</span></label>
+                                    <div class="col-lg-10">
+                                        <input class="form-control " id="phone" name="phone" value="@Model.phone" type="number" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-lg-offset-2 col-lg-10">
+                                        <button class="btn btn-primary" type="submit">Update</button>
+                                        <button class="btn btn-default" type="button">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- page end-->
+    </section>
+</section>
+<!--main content end-->
+  </section>
+<!-- container section end -->
+<!-- javascripts -->
+<!-- jquery validate js -->
+<script type="text/javascript" src="~/Scripts/Admin/jquery.validate.min.js"></script>
+
+<!-- custom form validation script for this page-->
+<script src="~/Scripts/Admin/form-validation-script.js"></script>
+<script src="~/Scripts/Admin/jquery.js"></script>
+<script src="~/Scripts/Admin/bootstrap.min.js"></script>
+<!-- nicescroll -->
+<script src="~/Scripts/Admin/jquery.scrollTo.min.js"></script>
+<script src="~/Scripts/Admin/jquery.nicescroll.js" type="text/javascript"></script>

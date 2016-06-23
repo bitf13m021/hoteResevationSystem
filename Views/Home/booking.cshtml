@@ -1,0 +1,44 @@
+﻿@model Hotel_Reservation_System.Models.User_booking
+<div class="contact-bg2">
+    <div class="container">
+        <div class="booking">
+            <h2>Book Here!!!!!!!!</h2>
+            <div class="col-md-8 booking-form">
+                <form method="get" action="~/Home/booking_method">
+                    <h5>NAME</h5>
+                    <input type="text" value="@Session["Name"]" readonly=readonly id="user_Name" name="user_Name" size="100%" />
+                    <h5>E-MAIL</h5>
+                    <input type="text" value="@Session["email"]" readonly=readonly id="Email" name="Email" size="100%" />
+                    <h5>PHONE</h5>
+                    <input type="text" value="@Session["Phone"]" readonly=readonly id="Phone" name="Phone" size="100%" />
+                    <h5>Room Type</h5>
+                    <select class="arrival" id="romm_name" name="romm_name" required=required width="100%">
+                        <option required=required>--Single--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                        <option>VIP</option>
+                        <option>Double</option>
+                        <option>Suit</option>
+
+                    </select>
+                    <h5>CHECK IN</h5>
+                    <input type="date" value="" id=Iidate" name="Idate" size="100%" required=required />
+                    <h5>CHECK OUT</h5>
+                    <input type="date" value="" id="odate" name="odate" size="100%" required=required />
+
+                    <h5 class="mem">MEMBERS</h5>
+                    <input min="1" type="number" id="Memebers" name="Memebers" value="1" class="form-control input-small" required=required />
+                    <h5 class="mem">Total Rooms</h5>
+                    <input min="1" type="number" id="total_room" name="total_room" value="1" class="form-control input-small" required=required />
+
+                    <input type="submit" value="Submit" />
+                    <input type="reset" value="Reset" />
+                </form>
+
+            </div>
+
+
+            <div class="clearfix"> </div>
+
+        </div>
+    </div>
+</div>
+

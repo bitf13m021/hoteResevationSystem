@@ -1,0 +1,58 @@
+﻿@model Hotel_Reservation_System.Models.User
+@{
+    ViewBag.Title = "Booking";
+}
+@{
+    Layout = "~/Views/Shared/loginLayout.cshtml";
+}
+
+<body class="login-img3-body">
+
+
+    <div class="container">
+
+        <form class="login-form" action="~/Home/register">
+            <div class="login-wrap">
+                <p class="login-img"><i class="icon_lock_alt"></i></p>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="icon_profile"></i></span>
+                    <input type="text" class="form-control" placeholder="Username" autofocus name="Name" id="Name" required>
+                   @Html.TextBoxFor(m=>m.Name)
+                    @Html.ValidationMessageFor(m=>m.Name)
+                    
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                    <input type="password" class="form-control" placeholder="Password" name="Password" id="Password" required>
+                    @*@Html.PasswordFor(m=>m.Password)
+                    @Html.ValidationMessageFor(m=>m.Password)*@
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="icon_profile"></i></span>
+                    <input type="email" class="form-control" placeholder="email" autofocus name="email" id="email" required>
+                    @*@Html.TextBoxFor(m=>m.email)
+                    @Html.ValidationMessageFor(m => m.email)*@
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="icon_profile"></i></span>
+                    <input type="text" class="form-control" placeholder="Phone No" autofocus name="phone_no" id="phone_no" required>
+                    @*@Html.TextBoxFor(m=>m.phone_no)
+                    @Html.ValidationMessageFor(m => m.phone_no)*@
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="icon_profile"></i></span>
+                    <input type="text" class="form-control" placeholder="Address" autofocus name="address" id="address" required>
+                    @*@Html.TextBoxFor(m=>m.address)
+                    @Html.ValidationMessageFor(m => m.address)*@
+                </div>
+                <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
+        </form>
+    </div>
+
+
+    <script>
+
+    </script>
+
+
+</body>

@@ -1,0 +1,158 @@
+﻿@{
+    ViewBag.Title = "_AdminLayout";
+}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="~/images/favicon.png">
+
+    <title> Admin </title>
+
+    <!-- Bootstrap CSS -->
+    <link href="~/Content/Admin/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="~/Content/Admin/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="~/Content/Admin/elegant-icons-style.css" rel="stylesheet" />
+    <link href="~/Content/Admin/font-awesome.min.css" rel="stylesheet" />
+   <!-- owl carousel -->
+    <link rel="stylesheet" href="~/Content/Admin/owl.carousel.css" type="text/css">
+    <link href="~/Content/Admin/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="~/Content/Admin/fullcalendar.css">
+    <link href="~/Content/Admin/widgets.css" rel="stylesheet">
+    <link href="~/Content/Admin/style.css" rel="stylesheet">
+    <link href="~/Content/Admin/style-responsive.css" rel="stylesheet" />
+    <link href="~/Content/Admin/xcharts.min.css" rel=" stylesheet">
+    <link href="~/Content/Admin/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="~/Scripts/Admin/html5shiv.js"></script>
+      <script src="~/Scripts/Admin/respond.min.js"></script>
+      <script src="~/Scripts/Admin/lte-ie7.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- container section start -->
+    <section id="container" class="">
+
+
+        <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="index.html" class="logo">Zainab <span class="lite">Tariq</span></a>
+            <!--logo end-->
+
+            <div class="nav search-row" id="top_menu">
+                <!--  search form start -->
+                <ul class="nav top-menu">
+                    <li>
+                        <form class="navbar-form">
+                            <input class="form-control" placeholder="Search" type="text">
+                        </form>
+                    </li>
+                </ul>
+                <!--  search form end -->
+            </div>
+
+            <div class="top-nav notification-row">
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+
+                    <!-- alert notification end-->
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                @*<img alt="" src="~/images/avatar1_small.jpg">*@
+                            </span>
+                            <span class="username">Zainab Tariq</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li class="eborder-top">
+                                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                            </li>
+
+                            <li>
+                               @Html.ActionLink("Logout","Index","Home")
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+        </header>
+        <!--header end-->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                    <li class="active">
+                        <span>
+                            @Html.ActionLink("Dashboard","AdminIndex","Admin")</span>
+                       
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_document_alt"></i>
+                            <span>Add</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li>@Html.ActionLink("Add Room","AddRoom","Admin")</li>
+                            <li>@Html.ActionLink("Add User", "AddUser", "Admin")</li>
+                        </ul>
+                    </li>
+                   
+
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_table"></i>
+                            <span>DataBase</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                            <li>@Html.ActionLink("RoomDetails","DataTables","Admin")</li>
+                              <li>@Html.ActionLink("User Booking", "userbooking", "Admin")</li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="icon_documents_alt"></i>
+                            <span>Pages</span>
+                            <span class="menu-arrow arrow_carrot-right"></span>
+                        </a>
+                        <ul class="sub">
+                             <li>@Html.ActionLink("hotel Info","hotelInfo","Admins")</li>
+                                 </ul>
+                    </li>
+
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+
+
+        @RenderBody()
+        <script src="~/Scripts/Admin/scripts.js"></script>
+        
+        
+            </body>
+</html>
